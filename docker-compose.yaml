@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  cg_python:
+    image: codegreen_python:latest
+    build: ./CodeGreen_Python
+    ports:
+      - "8050:8050"
+
+  cg_js:
+    image: codegreen_js:latest
+    build: ./CodeGreen_Javascript
+    ports:
+      - "8080:8080"
