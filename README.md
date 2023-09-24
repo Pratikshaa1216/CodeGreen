@@ -95,11 +95,11 @@ If you prefer to use Docker for your development environment, here are the steps
 
 2. Open your terminal and run the following command:
      ```bash
-    cd /path/to/your/CodeGreen-main
-   ```
-  ```bash
-   docker compose up -d
-   ```
+       cd /path/to/your/CodeGreen-main
+     ```
+     ```bash
+      docker compose up -d
+     ```
 
    This will start the necessary containers.
 
