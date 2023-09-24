@@ -56,7 +56,7 @@ Clone this repository to your local machine.
     ```bash
     pip install -r requirements.txt
     ```
-### To Run python web application
+### Running python web application
 
 1. **Go to the Script's Directory**: Open a Command Prompt and use the `cd` command to go to the folder where the `app.py` script is located.
 
