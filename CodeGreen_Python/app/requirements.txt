@@ -3,4 +3,7 @@ dash
 plotly
 codecarbon
 matplotlib
+webbrowser
 psutil
+subprocess
+time
