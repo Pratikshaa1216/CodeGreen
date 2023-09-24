@@ -2,13 +2,90 @@
 
 Welcome to CodeGreen! This project is focused on performing a comparative analysis of carbon footprints in web applications.
 
+## Pre-requisites
+
+- Python 3.10 or higher
+- Anaconda (if required)
+- Docker Desktop (https://www.docker.com/products/docker-desktop/)
+- Node.js 
 ## Development Setup
 
-### Cloning the Repository
+Clone this repository to your local machine.
 
-To get started, follow these steps:
+### Conda
 
-1. Clone this repository to your local machine.
+1. Go to the repository
+   ```bash
+   cd CodeGreen
+   ```
+
+2. Install the required libraries
+    ```bash
+    conda env create -n codegreen --file requirements.yml
+    ```
+
+3. Activate the environment
+    ```bash
+    conda activate codegreen
+    ```
+
+### PIP
+
+1. Go to the repository
+   ```bash
+   cd CodeGreen
+   ```
+
+2. Create a new virtual environment:
+    ```bash 
+    python -m venv venv --prompt codegreen
+    source venv/bin/activate
+    ```
+    (For Windows)
+    ```bash 
+    python -m venv codegreen
+    cd codegreen/Scripts/activate.bat
+    ```
+
+3. Install upgrade some packages
+    ```bash
+    pip install --upgrade pip setuptools wheel
+    ```
+
+4. Install required dependencies
+    ```bash
+    pip install -r requirements.txt
+    ```
+### To Run python web application
+
+1. **Go to the Script's Directory**: Open a Command Prompt and use the `cd` command to go to the folder where the `app.py` script is located.
+
+   ```bash
+   cd /path/to/your/python/script/directory
+   ```
+
+2. **Launch the Python Web Application**:
+   ```bash
+   python app.py
+   ```
+
+This command will launch the Python web application.
+
+
+### Running a JavaScript Web Application
+
+1. **Navigate to the Script's Directory**: Open a Command Prompt and use the `cd` command to change the current directory to the folder where the `index.HTML` script is located.
+
+   ```bash
+   cd /path/to/your/JavaScript/script/directory
+   ```
+
+2. **Launch the JavaScript Web Application**:
+   ```bash
+   start index.html
+   ```
+
+This command will open JavaScript web application.
 
 ### Running the Docker Compose File 
 
@@ -66,4 +143,5 @@ Once you've completed the setup, you can access the applications as follows:
    ```
 
    This will automatically open the JavaScript web application.
+
 
