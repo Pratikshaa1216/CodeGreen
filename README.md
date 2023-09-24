@@ -61,7 +61,7 @@ Clone this repository to your local machine.
 1. **Go to the Script's Directory**: Open a Command Prompt and use the `cd` command to go to the folder where the `app.py` script is located.
 
    ```bash
-   cd /path/to/your/python/script/directory
+   cd /path/to/your/CodeGreen/CodeGreen_Python/app
    ```
 
 2. **Launch the Python Web Application**:
@@ -77,7 +77,7 @@ This command will launch the Python web application.
 1. **Navigate to the Script's Directory**: Open a Command Prompt and use the `cd` command to change the current directory to the folder where the `index.HTML` script is located.
 
    ```bash
-   cd /path/to/your/JavaScript/script/directory
+   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript
    ```
 
 2. **Launch the JavaScript Web Application**:
@@ -94,8 +94,10 @@ If you prefer to use Docker for your development environment, here are the steps
 1. Install Docker from the official website and ensure that the Docker engine is up and running.
 
 2. Open your terminal and run the following command:
-
-   ```bash
+     ```bash
+    cd /path/to/your/CodeGreen-main
+   ```
+  ```bash
    docker compose up -d
    ```
 
@@ -117,7 +119,7 @@ Once you've completed the setup, you can access the applications as follows:
 1. **Navigate to the Script Directory**: Open a Command Prompt and use the `cd` command to navigate to the directory containing the `auto.py` script.
 
    ```bash
-   cd /path/to/your/python/script/directory
+    cd /path/to/your/CodeGreen/CodeGreen_Python/app
    ```
 
 2. **Execute the Automation Script**: Run the following command to execute the automation script:
@@ -133,7 +135,7 @@ Once you've completed the setup, you can access the applications as follows:
 1. **Navigate to the Script Directory**: Open a Command Prompt and use the `cd` command to navigate to the directory containing the `autojs.py` script.
 
    ```bash
-   cd /path/to/your/javascript/script/directory
+   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript
    ```
 
 2. **Execute the Automation Script**: Run the following command to execute the automation script:
