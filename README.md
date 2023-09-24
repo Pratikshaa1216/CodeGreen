@@ -32,6 +32,7 @@ Once you've completed the setup, you can access the applications as follows:
 
 - **JavaScript Web Application**: Visit [http://localhost:8080/](http://localhost:8080/) to use the JavaScript web application.
 
+
 ### Running the Web Applications Using Automation Scripts
 
 #### Python Web Application:
