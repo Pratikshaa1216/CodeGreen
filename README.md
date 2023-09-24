@@ -2,7 +2,7 @@
 
 Welcome to CodeGreen! This project is focused on performing a comparative analysis of carbon footprints in web applications.
 
-## Pre-requisites
+### Pre-requisites
 
 - Python 3.10 or higher
 - Anaconda (if required)
