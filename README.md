@@ -27,35 +27,62 @@ Clone this repository to your local machine.
 3. Activate the environment
     ```bash
     conda activate codegreen
+
     ```
+### PIP
+
+**For Linux and macOS (Unix-based systems)**:
+
+1. Go to the repository
+```bash
+cd CodeGreen
+ ```
+
+2. Create a new virtual environment with a custom prompt
+```bash
+python -m venv venv --prompt codegreen
+ ```
+3. Activate the virtual environment
+```bash
+source venv/bin/activate
+ ```
+4. Upgrade pip, setuptools, and wheel
+```bash
+pip install --upgrade pip setuptools wheel
+ ```
+5. Install required dependencies from requirements.txt
+```bash
+pip install -r requirements.txt
+ ```
 
 ### PIP
 
+**For Windows**:
+
 1. Go to the repository
-   ```bash
-   cd CodeGreen
-   ```
+```bash
+cd CodeGreen
+ ```
 
-2. Create a new virtual environment:
-    ```bash 
-    python -m venv venv --prompt codegreen
-    source venv/bin/activate
-    ```
-    (For Windows)
-    ```bash 
-    python -m venv codegreen
-    cd codegreen/Scripts/activate.bat
-    ```
+2. Create a new virtual environment 
+```bash
+python -m venv venv
+ ```
 
-3. Install upgrade some packages
-    ```bash
-    pip install --upgrade pip setuptools wheel
-    ```
+3. Activate the virtual environment
+```bash
+venv\Scripts\activate
+ ```
+4. Upgrade pip, setuptools, and wheel
+```bash
+pip install --upgrade pip setuptools wheel
+ ```
+5. Install required dependencies from requirements.txt
+```bash
+pip install -r requirements.txt
+ ```
 
-4. Install required dependencies
-    ```bash
-    pip install -r requirements.txt
-    ```
+  
 ### Running python web application
 
 1. **Go to the Script's Directory**: Open a Command Prompt and use the `cd` command to go to the folder where the `app.py` script is located.
