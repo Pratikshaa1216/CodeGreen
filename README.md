@@ -10,7 +10,7 @@ To get started, follow these steps:
 
 1. Clone this repository to your local machine.
 
-### Running the Docker Compose File (Optional)
+### Running the Docker Compose File 
 
 If you prefer to use Docker for your development environment, here are the steps to set it up:
 
@@ -32,3 +32,7 @@ Once you've completed the setup, you can access the applications as follows:
 
 - **JavaScript Web Application**: Visit [http://localhost:8080/](http://localhost:8080/) to use the JavaScript web application.
 
+### Running the Web applications by using Automation scripts
+For python Web application:
+
+For Javascript Web application:
