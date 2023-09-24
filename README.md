@@ -32,7 +32,37 @@ Once you've completed the setup, you can access the applications as follows:
 
 - **JavaScript Web Application**: Visit [http://localhost:8080/](http://localhost:8080/) to use the JavaScript web application.
 
-### Running the Web applications by using Automation scripts
-For python Web application:
+### Running the Web Applications Using Automation Scripts
 
-For Javascript Web application:
+#### Python Web Application:
+
+1. **Navigate to the Script Directory**: Open a Command Prompt and use the `cd` command to navigate to the directory containing the `auto.py` script.
+
+   ```bash
+   cd /path/to/your/python/script/directory
+   ```
+
+2. **Execute the Automation Script**: Run the following command to execute the automation script:
+
+   ```bash
+   python auto.py
+   ```
+
+   This will automatically launch the Python web application.
+
+#### JavaScript Web Application:
+
+1. **Navigate to the Script Directory**: Open a Command Prompt and use the `cd` command to navigate to the directory containing the `autojs.py` script.
+
+   ```bash
+   cd /path/to/your/javascript/script/directory
+   ```
+
+2. **Execute the Automation Script**: Run the following command to execute the automation script:
+
+   ```bash
+   python autojs.py
+   ```
+
+   This will automatically open the JavaScript web application.
+
