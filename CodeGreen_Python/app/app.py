@@ -657,4 +657,4 @@ def update_projects_by_date_range(start_date, end_date, file_contents):
     return [{'label': name, 'value': name} for name in unique_project_names]
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port="8050", debug=True)
+    app.run(host="127.0.0.1", port="8050", debug=True)
