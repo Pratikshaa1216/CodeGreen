@@ -83,7 +83,7 @@ pip install -r requirements.txt
  ```
 
   
-### Running python web application
+### Running a python web application
 
 1. **Go to the Script's Directory**: Open a Command Prompt and use the `cd` command to go to the folder where the `app.py` script is located.
 
