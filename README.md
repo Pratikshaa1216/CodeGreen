@@ -136,7 +136,7 @@ Once you've completed the setup, you can access the applications as follows:
 
 - **Python Application**: Visit [http://localhost:8050/](http://localhost:8050/) to run the Python application.
 
-- **JavaScript Web Application**: Visit [http://localhost:8080/](http://localhost:8080/) to use the JavaScript web application.
+- **JavaScript Application**: Visit [http://localhost:8080/](http://localhost:8080/) to use the JavaScript web application.
 
 
 ### Running the Web Applications Using Automation Scripts
