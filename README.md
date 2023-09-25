@@ -168,4 +168,5 @@ Once you've completed the setup, you can access the applications as follows:
 
    This will automatically open the JavaScript web application.
 
+Note:  I have contributed to this GitHub repository.
 
