@@ -7,7 +7,7 @@ Welcome to CodeGreen! This project is focused on performing a comparative analys
 - Python 3.10 or higher
 - Anaconda (if required)
 - Docker Desktop (https://www.docker.com/products/docker-desktop/)
-- Node.js 
+- Node.js 18.16.0 or higher
 ## Development Setup
 
 Clone this repository to your local machine.
@@ -104,12 +104,7 @@ This command will launch the Python web application.
 1. **Navigate to the Script's Directory**: Open a Command Prompt and use the `cd` command to change the current directory to the folder where the `index.HTML` script is located.
 
    ```bash
-   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript
-   ```
-
-2. **Launch the JavaScript Web Application**:
-   ```bash
-   start index.html
+   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript/index.html
    ```
 
 This command will open JavaScript web application.
