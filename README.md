@@ -102,11 +102,17 @@ This command will launch the Python web application.
 ### Running a JavaScript Web Application
 
 1. **Navigate to the Script's Directory**: Open a Command Prompt and use the `cd` command to change the current directory to the folder where the `index.HTML` script is located.
-
    ```bash
-   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript/index.html
+    npm install -g live-server
+     ```
+   ```bash
+   cd /path/to/your/JavaScript/CodeGreen/CodeGreen_Javascript
    ```
 
+    ```bash
+    live-server --port=5500
+
+   ``` 
 This command will open JavaScript web application.
 
 ### Running the Docker Compose File 
@@ -116,7 +122,8 @@ If you prefer to use Docker for your development environment, here are the steps
 1. Install Docker from the official website and ensure that the Docker engine is up and running.
 
 2. Open your terminal and run the following command:
-     ```bash
+
+    ```bash
        cd /path/to/your/CodeGreen-main
      ```
      ```bash
