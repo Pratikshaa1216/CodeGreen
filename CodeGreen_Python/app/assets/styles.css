@@ -1,102 +1,108 @@
-body{
+/* Define background and text styles for the entire page */
+body {
     background: linear-gradient(to bottom, #3a3a3a, #0b0b0b);
     color: #eee;
     min-height: 100vh;
 }
 
-h1{
+/* Style for main heading */
+h1 {
     text-align: center;
     margin: 30px;
 }
 
-#dateSearch, #RangeSearch{
+/* Style for two specific elements with IDs */
+#dateSearch, #RangeSearch {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     height: 20px;
     margin: 10px;
     margin-bottom: 50px;
 }
 
-#dailyCO2, #dailyRangeCO2{
+/* Style for two elements with IDs */
+#dailyCO2, #dailyRangeCO2 {
     font-size: xx-large;
     color: #222;
     margin-left: 30px;
 }
 
-
-#emission{
- font-size: 200px;
- color: #222;
+/* Style for a specific element with ID */
+#emission {
+    font-size: 200px;
+    color: #222;
 }
 
-
-
-#head{
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- justify-content:space-evenly;
-}
-#head1{
+/* Styles for a group of elements with the same parent ID */
+#head {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
-   }
-#head2{
+    justify-content: space-evenly;
+}
+#head1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-evenly;
-   }
+    justify-content: space-between;
+}
+#head2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
- #btn, #Datebtn, #Rangebtn, button{
-    padding :5px; 
-    border-radius:2px ;
+/* Styles for buttons and button-like elements */
+#btn, #Datebtn, #Rangebtn, button {
+    padding: 5px;
+    border-radius: 2px;
     font-size: medium;
     margin: 5px;
-    color:#ffffff;
+    color: #ffffff;
     background-color: rgb(78, 71, 78);
 }
-#csvSelect{
-    padding :5px 40px; 
-    border-radius:2px ;
+#csvSelect {
+    padding: 5px 40px;
+    border-radius: 2px;
     font-size: medium;
     margin: 5px;
-    color:#fffcfc;
-    background-color: rgb(78, 71, 78); 
+    color: #fffcfc;
+    background-color: rgb(78, 71, 78);
 }
+
+/* Styles for specific input elements */
 #date {
     padding: 5px;
     font-size: medium;
     background-color: #3a3a3a;
     color: #eee;
 }
-#rangeStart, #rangeEnd{
+#rangeStart, #rangeEnd {
     margin: 5px;
     font-size: medium;
     background-color: #3a3a3a;
 }
 
-#inputElements{
+/* Styles for a group of input elements */
+#inputElements {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
-label{
+label {
     font-size: medium;
 }
-h4{
+h4 {
     display: inline;
-    
 }
 
-
-#container{
+/* Styles for a container */
+#container {
     flex: 1;
-    min-width: 45%; 
+    min-width: 45%;
     color: #eee;
     margin: 20px;
     text-align: left;
@@ -104,41 +110,43 @@ h4{
     border: 2px solid #00eeffbb;
     border-radius: 4px;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
+}
 
-   }
-
-#MetadataHeader{
+/* Styles for the header inside the container */
+#MetadataHeader {
     font-weight: bold;
     text-align: center;
-    
-}
-#container div{
-    margin: 10px 10px;
-}
-#emissionRateChart{
-    width: 45%;
-    box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    margin: 20px;  
 }
 
-#energyComparisonChart{
+/* Styles for child divs inside the container */
+#container div {
+    margin: 10px 10px;
+}
+
+/* Styles for specific chart elements */
+#emissionRateChart {
+    width: 45%;
+    box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
+    margin: 20px;
+}
+#energyComparisonChart {
     flex: 1;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    max-width: 45%; 
+    max-width: 45%;
+    margin: 20px;
+}
+#powerComparisonChart {
+    width: 45%;
+    box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
     margin: 20px;
 }
 
-#powerComparisonChart{
-    width: 45%;
-    box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    margin: 20px;  
-}
-
-#dataCircle{
+/* Styles for a circular data display */
+#dataCircle {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -148,45 +156,55 @@ h4{
     box-shadow: 0px 0px 300px rgba(135, 78, 138, 0.4);
 }
 
-#avgNum{
+/* Styles for average number */
+#avgNum {
     font-weight: bolder;
-    font-size:xx-large;
-    margin:0px;
+    font-size: xx-large;
+    margin: 0px;
     padding: 0px;
 }
-h3{
+h3 {
     text-align: center;
 }
-#circle{
+
+/* Styles for specific elements */
+#circle {
     margin: 30px;
 }
-#second{
-    margin-left: 10px ;
+#second {
+    margin-left: 10px;
 }
-#projectDropdown{
-    margin:0px;
+
+/* Styles for a dropdown menu */
+#projectDropdown {
+    margin: 0px;
     padding: 0px;
     width: 150px;
     color: #3a3a3a;
-
 }
-#runIdBtn{
+
+/* Styles for a button with ID */
+#runIdBtn {
     padding: 5px;
-    border-radius: 2px; 
+    border-radius: 2px;
     font-size: medium;
     color: #ffffff;
     background-color: rgb(78, 71, 78);
 }
-#p-search{
+
+/* Styles for a specific section with ID */
+#p-search {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
-#run-id{
+
+/* Styles for a specific element with ID */
+#run-id {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
     margin: 20px;
     color: #bbb;
-  }
+}
