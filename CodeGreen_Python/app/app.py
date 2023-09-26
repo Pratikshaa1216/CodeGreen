@@ -5,15 +5,19 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import base64
 
+# Create a Dash application
 app = dash.Dash(__name__)
 server = app.server
 
+# Define HTML components for displaying data
 emission = html.Div(id='emitted')
 metadata = html.Div(id='metadata')
 averageData = html.Div(id='averageData')
 
+# Initialize the data variable to store parsed CSV data
 data = None
 
+# Callback to show/hide graphs when the "Visualize" button is clicked
 @app.callback(
     [Output('head', 'style'),
      Output('head2', 'style')],
@@ -26,7 +30,7 @@ def show_hide_graphs(n_clicks):
     else:
         return {'visibility': 'visible'}, {'visibility': 'visible'}
     
-
+# Callback to update project dropdown options when a CSV file is uploaded
 @app.callback(
     Output('projectDropdown', 'options'),
     [Input('csvFile', 'contents')],
@@ -35,14 +39,16 @@ def show_hide_graphs(n_clicks):
 def update_project_dropdown(contents):
     global data
     if contents is not None:
+        # Parse the uploaded CSV data
         decoded_content = base64.b64decode(contents.split(',')[1]).decode('utf-8')
         data = parse_csv(decoded_content)
+        # Get unique project names and create options for the dropdown
         unique_project_names = list({d['project_name'] for d in data})
         return [{'label': name, 'value': name} for name in unique_project_names]
     return []
     
 
-
+# Callback to handle CSV file upload and update various components with data
 @app.callback(
     [Output('metadata', 'children',allow_duplicate=True),
      Output('emissionRateChart', 'figure',allow_duplicate=True),
@@ -60,7 +66,8 @@ def handle_csv_upload(n_clicks, file):
 
     decoded_content = base64.b64decode(file.split(',')[1]).decode('utf-8')
     data = parse_csv(decoded_content)
-
+    
+ # Generate metadata, charts, and average data
     metadata = generate_metadata(data)
     emission_rate_chart = plot_emission_rate(data)
     energy_comparison_chart = plot_energy_comparison(data)
@@ -69,7 +76,7 @@ def handle_csv_upload(n_clicks, file):
 
     return metadata, emission_rate_chart, energy_comparison_chart, power_comparison_chart, average_data
 
-
+# Function to parse CSV data and return it as a list of dictionaries
 def parse_csv(csv):
     lines = csv.splitlines()
     delimiter = ';' if ';' in lines[0] else ','
@@ -84,7 +91,7 @@ def parse_csv(csv):
 
     return data
 
-
+# Function to generate metadata HTML components based on data
 def generate_metadata(data):
     osVersion = data[0]['os']
     pythonVersion = data[0]['python_version']
@@ -116,7 +123,7 @@ def generate_metadata(data):
 
     return metadata
 
-
+# Function to create an emission rate line chart using Plotly
 def plot_emission_rate(data):
     dates = [d['timestamp'] for d in data]
     emissionRates = [float(d['emissions_rate']) for d in data]
@@ -145,7 +152,7 @@ def plot_emission_rate(data):
     fig = go.Figure(data=[trace], layout=layout)
     return fig
 
-
+ # Function to create an energy comparison line chart using Plotly
 def plot_energy_comparison(data):
     energyConsumption = [float(d['energy_consumed']) for d in data]
     ramEnergy = [float(d['ram_energy']) for d in data]
@@ -196,7 +203,7 @@ def plot_energy_comparison(data):
     fig = go.Figure(data=[trace1, trace2, trace3], layout=layout)
     return fig
 
-
+# Function to create a power comparison bar chart using Plotly
 def plot_power_comparison(data):
     powerConsumption = [float(d['energy_consumed']) for d in data]
     ramPower = [float(d['ram_power']) for d in data]
@@ -245,7 +252,7 @@ def plot_power_comparison(data):
     fig = go.Figure(data=[trace1, trace2, trace3], layout=layout)
     return fig
 
-
+ # Function to display the sum of energy, emissions, and duration
 def display_sum(data):
     energyValues = [float(d['energy_consumed']) for d in data]
     emissionValues = [float(d['emissions']) for d in data]
@@ -301,7 +308,8 @@ def display_sum(data):
     )
 
     return average_data
-
+    
+# Function to display the average values of energy, emissions, and duration
 def display_average(data):
     energy_values = [float(d['energy_consumed']) for d in data]
     emission_values = [float(d['emissions']) for d in data]
@@ -358,8 +366,7 @@ def display_average(data):
 
     return average_data
 
-
-
+# Define the layout of the Dash application
 app.layout = html.Div(
     children=[
         html.H1('Carbon Emission'),
@@ -632,7 +639,7 @@ def update_projects_by_date(selected_date, file_contents):
     decoded_content = base64.b64decode(file_contents.split(',')[1]).decode('utf-8')
     data = parse_csv(decoded_content)
 
-    
+    # Filter data based on the selected date 
     filtered_data = [d for d in data if d['timestamp'].split('T')[0] == selected_date]
     unique_project_names = list({d['project_name'] for d in filtered_data})
     return [{'label': name, 'value': name} for name in unique_project_names]
