@@ -477,25 +477,18 @@ function displayRecent(data) {
 
 //Run_id with respect to date and daterange
 function displayRunIdByDate(date) {
-  // Filter the data to find the 'run_id' for the selected date
-  let run = data.find((d) => d.timestamp.split('T')[0] === date);
-  
-  // If a 'run_id' is found, display it
-  if (run) {
+let run = data.find((d) => d.timestamp.split('T')[0] === date);
+   if (run) {
     document.getElementById('runIdDisplay').textContent = 'Run ID: ' + run.run_id;
   } else {
     document.getElementById('runIdDisplay').textContent = 'No run found for this date';
   }
 }
-
-// Add an event listener for the 'dateSearch' form
 document.getElementById('dateSearch').addEventListener('submit', function(e) {
   e.preventDefault();
-
-  // Get the selected date
+ // Get the selected date
   let date = document.getElementById('date').value;
-
-  // Display the 'run_id' for the selected date
+ // Display the 'run_id' for the selected date
   displayRunIdByDate(date);
 });
 
