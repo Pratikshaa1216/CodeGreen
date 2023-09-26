@@ -1,95 +1,101 @@
-body{
+/* Apply background gradient to the entire page */
+body {
     background: linear-gradient(to bottom, #3a3a3a, #0b0b0b);
     color: #eee;
     min-height: 100vh;
 }
 
-h1{
+/* Center-align the main heading */
+h1 {
     text-align: center;
 }
 
-#dateSearch, #RangeSearch{
+/* Styling for date and date range search forms */
+#dateSearch, #RangeSearch {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     height: 20px;
     margin: 10px;
     margin-bottom: 40px;
 }
 
-#dailyCO2, #dailyRangeCO2{
+/* Styling for daily CO2 data */
+#dailyCO2, #dailyRangeCO2 {
     font-size: xx-large;
     color: #222;
     margin-left: 30px;
 }
+
+/* Styling for run ID display */
 #runIdDisplay {
     position: absolute;
-    top: 20px; /* Adjust this value to position the element below the blue circles */
+    top: 20px; 
     left: 0;
     right: 0;
-    text-align:  right;
+    text-align: right;
     font-size: 20px;
     font-weight: bold;
     color: #e4dcdc;
-    
     padding: 10px 0;
     border-radius: 5px;
-  }
-  
-
-#emission{
- font-size: 200px;
- color: #222;
 }
-/* span{
-    font-size: large;
-    padding: 0;
-    margin: 0;
-} */
 
-#head{
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- justify-content:space-evenly;
+/* Styling for emission text */
+#emission {
+    font-size: 200px;
+    color: #222;
 }
-#head1{
+
+/* Styling for the container holding various elements */
+#head {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
-   }
+    justify-content: space-evenly;
+}
 
+/* Styling for another container holding elements */
+#head1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
-input, #Datebtn, #Rangebtn{
-    padding :10px; 
-    border-radius:2px ;
+/* Styling for input elements, buttons, and forms */
+input, #Datebtn, #Rangebtn {
+    padding: 10px;
+    border-radius: 2px;
     font-size: medium;
-    color:#ccc;
+    color: #ccc;
     background-color: rgb(78, 71, 78);
 }
 
-form{
+form {
     width: 100%;
     margin-bottom: 20px;
 }
-label{
+
+label {
     font-size: medium;
 }
-h4{
+
+h4 {
     display: inline;
     margin: 20px;
 }
-#Datebtn, #Rangebtn{
- margin: 5px;
- padding: 5px;
 
+/* Additional styling for buttons */
+#Datebtn, #Rangebtn {
+    margin: 5px;
+    padding: 5px;
 }
 
-#container{
+/* Styling for the main data container */
+#container {
     flex: 1;
-    min-width: 45%; 
-    /* min-width: 20%; */
+    min-width: 45%;
     color: #eee;
     margin: 20px;
     text-align: left;
@@ -97,46 +103,47 @@ h4{
     border: 2px solid #00eeffbb;
     border-radius: 4px;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
+}
 
-   }
-
-#MetadataHeader{
+/* Styling for metadata header */
+#MetadataHeader {
     font-weight: bold;
     text-align: center;
-    
 }
-#container div{
+
+/* Styling for elements within the container */
+#container div {
     margin: 10px 10px;
 }
-#emissionRateChart{
+
+/* Styling for emission rate chart */
+#emissionRateChart {
     width: 45%;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    margin: 20px;  
-
+    margin: 20px;
 }
 
-#energyComparisonChart{
+/* Styling for energy comparison chart */
+#energyComparisonChart {
     flex: 1;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    max-width: 45%; 
+    max-width: 45%;
     margin: 20px;
-
-
 }
 
-#powerComparisonChart{
+/* Styling for power comparison chart */
+#powerComparisonChart {
     width: 45%;
     box-shadow: 0px 0px 100px rgba(135, 78, 138, 0.4);
-    margin: 20px;  
-
-
+    margin: 20px;
 }
 
-#dataCircle{
+/* Styling for data circles */
+#dataCircle {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -144,48 +151,53 @@ h4{
     border-radius: 50%;
     border: 2px solid #00eeffbb;
     box-shadow: 0px 0px 300px rgba(135, 78, 138, 0.4);
-
 }
 
-#avgNum{
+/* Styling for average number text */
+#avgNum {
     font-weight: bolder;
-    font-size:xx-large;
-    margin:0px;
+    font-size: xx-large;
+    margin: 0px;
     padding: 0px;
 }
-h3{
+
+/* Center-align headings */
+h3 {
     text-align: center;
 }
-#circle{
-    margin: 30px;
-}
+
+/* Styling for project selection section */
 #projectSelection {
     display: flex;
     align-items: center;
     margin: 10px;
     margin-bottom: 50px;
-  }
-  
-  #projectDropdown, #runButton {
+}
+
+/* Styling for project dropdown and run button */
+#projectDropdown, #runButton {
     padding: 10px;
     border-radius: 2px;
     font-size: medium;
     color: #ccc;
     background-color: rgb(78, 71, 78);
-  }
-  
-  #projectDropdown {
+}
+
+#projectDropdown {
     margin-right: 10px;
-  }
-  
-  #runButton {
+}
+
+#runButton {
     margin: 5px;
     padding: 5px;
-  }
-  #run-id{
+}
+
+/* Styling for run ID display */
+#run-id {
     text-align: right;
     font-size: x-large;
     font-weight: bold;
     color: #bbb;
     margin: 10px 100px 30px 50px;
-  }
+}
+
