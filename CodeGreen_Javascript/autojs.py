@@ -12,11 +12,11 @@ def open_browser(url):
     subprocess.Popen(["start", "", url], shell=True)
 
 def track_emissions(duration):
-    # Create an instance of the EmissionsTracker to monitor emissions
+
     tracker = EmissionsTracker()
     tracker.start()  # Start tracking emissions
 
-    # Sleep for the specified duration to collect emissions data
+
     time.sleep(duration)
 
     tracker.stop()  # Stop tracking emissions
