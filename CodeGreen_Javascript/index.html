@@ -10,25 +10,28 @@
 <body>
   <h1>Carbon Emission</h1>
   
-
-<div id="head1">
+<!-- Container for user input elements -->
+  <div id="head1">
   <div id="inputElements">
-    <form id="csvForm">
+
+<!-- Form for uploading a CSV file -->
+     <form id="csvForm">
       <h4 for="csvFile">Upload CSV File:  </h4>
       <input type="file" id="csvFile" accept=".csv" />
       <input type="submit" id='btn' value="Visualize" />
     </form>
     
-    <form id="dateSearch">
+ <!-- Form for searching by date -->  
+     <form id="dateSearch">
       <div>
         <h4>Date:   </h4>
       <input type="date" id="date"/>
       <button id="Datebtn">Go</button>
       </div>
-
-    </form>  
-
-    <form id="RangeSearch">
+ </form>  
+    
+<!-- Form for searching by date range -->
+     <form id="RangeSearch">
 
       <div>
         <h4>Date range:   </h4>
@@ -37,12 +40,13 @@
       <input type="date" id="rangeEnd"/>
       <button id="Rangebtn">Go</button>
       </div>
-
-      <div id="dailyRangeCO2"></div>
-
-    </form> 
-
-    <div id="projectSelection">
+      
+<!-- Container for displaying daily range CO2 data -->
+       <div id="dailyRangeCO2"></div>
+</form> 
+    
+<!-- Dropdown selection for project name -->
+      <div id="projectSelection">
       <h4>Project Name:</h4>
       <select id="projectDropdown">
         <option value="">All Projects</option>
@@ -50,20 +54,24 @@
       <button id="runButton">GO</button>
     </div>
   </div>
-
-  <div id="averageData"></div>
+  
+<!-- Container for displaying average data -->
+    <div id="averageData"></div>
 </div>
-
+  
+<!-- Container for metadata and emission rate chart -->
 <div id="head">
   <div id="metadata"> </div>
   <div id="emissionRateChart"></div>
 </div>
-<div id="head">
+  
+<!-- Container for energy and power comparison charts -->
+  <div id="head">
   <div id="energyComparisonChart"> </div>
   <div id="powerComparisonChart"></div>
 </div>
 
-
+<!-- Container for displaying run ID -->
 <div id="runIdDisplay"></div>
 
 
