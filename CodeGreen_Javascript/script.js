@@ -1,3 +1,4 @@
+// Variables to store HTML elements
 let emission = document.getElementById("emitted");
 let metadata = document.getElementById("metadata");
 let averageData = document.getElementById("averageData");
@@ -6,10 +7,12 @@ let data;
 
 document.getElementById("csvForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent form submission
-
+  
+ // Get the selected CSV file
   let file = document.getElementById("csvFile").files[0];
   let reader = new FileReader();
-
+  
+// Read and process the CSV file
   reader.onload = function (e) {
     let contents = e.target.result;
     data = parseCSV(contents);
